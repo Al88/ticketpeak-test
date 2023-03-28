@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Add styles for the ticket here */
+    /* This is just an example, you can customize it as per your requirements */
+    .ticket {
+      border: 2px solid #000;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      background-color: #fff;
+      color: #333;
+      width: 350px;
+    }
+    .ticket-header {
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .ticket-header .ticket-logo img{
+        max-width: 100px;;
+    }
+    .ticket-header .ticket-title h2{
+        margin-bottom: 3px;
+    }
+
+    .ticket-header .ticket-address p{
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: rgb(95, 95, 95);
+    }
+    .ticket-info {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .ticket-info .ticket-qr .ticket-qr-number p{
+        margin-top: 0;
+        color: rgb(95, 95, 95);
+    }
+    .ticket-label {
+      font-weight: bold;
+    }
+    .ticket-event-name h2{
+        margin-bottom:5px;
+    }
+    .ticket-event-name p{
+        margin-top: 0;
+        color: rgb(95, 95, 95);
+    }
+    .ticket-event-location {
+        border:1px dashed rgb(95, 95, 95);
+        padding: 10px;
+        overflow:auto;
+    }
+    .ticket-event-location>div {
+        width: 33%;
+        float: left;
+    }
+    .ticket-event-location > div:not(:first-child) {
+        border-left: 1px dashed rgb(95, 95, 95);
+    }
+
+    .ticket-event-location-header {
+        color:red;
+        text-decoration: underline;
+    }
+    .ticket-event-location-value {
+
+    }
+    .ticket-user{
+        overflow: auto;
+        margin-top:10px
+    }
+    .ticket-user > div {
+        width: 50%;
+        float: left;
+        text-align: left;
+    }
+    .ticket-user > .ticket-user-name {
+        text-align: right;
+    }
+  </style>
+</head>
+<body>
+
+<div class="ticket">
+  <div class="ticket-header">
+      <div class="ticket-logo">
+        <img src="https://ticketpeak.co/box/20230321/example_files/jJVuzGr93qvwDqaJv4LgNctp8MTAZ7ltuOurIkiK.png">
+      </div>
+      <div class="ticket-title">
+        <h2>
+            James and the Giant Peach
+        </h2>
+      </div>
+      <div class="ticket-address">
+        <p>
+            123 Theatre Way, NY, NY, 12345
+        </p>
+      </div>
+    </div>
+  <div class="ticket-info">
+      <div class="ticket-qr">
+            <div class="ticket-qr-img">
+                <img src="https://ticketpeak.co/box/20230321/example_files/1755618.png">
+            </div>
+            <div class="ticket-qr-number">
+                <p>
+                001755618099
+                </p>
+            </div>
+      </div>
+      <div class="ticket-event-name">
+            <h2> Legally Blonde</h2>
+            <p>Friday December 22, 2023 1:00pm CDT</p>
+      </div>
+      <div class="ticket-event-location">
+            <div>
+                <div class="ticket-event-location-header">Section</div>
+                <div class="ticket-event-location-value">Center</div>
+            </div>
+            <div>
+                <div class="ticket-event-location-header">Row</div>
+                <div class="ticket-event-location-value">A</div>
+            </div>
+            <div>
+                <div class="ticket-event-location-header">Seat</div>
+                <div class="ticket-event-location-value">113</div>
+            </div>
+      </div>
+      <div class="ticket-user">
+          <div class="ticket-price">
+            <div>Ticket Price: $5.00</div>
+            <div>Adult</div>
+          </div>
+          <div class="ticket-user-name">
+            <span>Sabrina Stewart</span>
+          </div>
+      </div>
+
+  </div>
+</div>
+
+</body>
+</html>

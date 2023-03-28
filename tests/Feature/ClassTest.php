@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\ClassModel;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -13,10 +14,29 @@ class ClassTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function test_class()
     {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
+        $client = ClassModel::where('active', 1)->get()->random()->id;
+        $this->get('/api/clients/' . $client->id . '/classes')
+            ->assertStatus(200)
+            ->assertJsonStructure(
+                [
+                    'events',
+                    'event_dates' => [
+                        'id',
+                        'name_suffix',
+                        'closed',
+                        'virtual',
+                        'private',
+                        'sold_out',
+                        'date_to_show_online',
+                        'time_to_show_online',
+                        'event' => [
+                            'id',
+                            'name'
+                        ]
+                    ]
+                ]
+            );
     }
 }
